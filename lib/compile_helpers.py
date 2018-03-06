@@ -53,6 +53,8 @@ def setup_webdir_if_it_doesnt_exist(ctx):
             fu.where_name_does_not_match(
                 directory_fuzzy_pattern % os.path.join(ctx['BUILD_DIR'], '.bp-config'))
             fu.where_name_does_not_match(
+                directory_fuzzy_pattern % os.path.join(ctx['BUILD_DIR'], 'nb-config'))
+            fu.where_name_does_not_match(
                 directory_fuzzy_pattern % os.path.join(ctx['BUILD_DIR'], ctx['LIBDIR']))
             fu.where_name_does_not_match(
                 file_exact_pattern % os.path.join(ctx['BUILD_DIR'], 'manifest.yml'))
